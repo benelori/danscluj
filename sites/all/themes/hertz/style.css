@@ -79,7 +79,7 @@ th, tr, td {  vertical-align: middle; }
 th { padding-right: 1em; }
 .sticky-header th, .sticky-table th {  border-bottom: 3px solid #ccc;  padding-right: 1em;  text-align: left; }
 img {
-	max-width: 100%; 
+	max-width: 100%;
 }
 blockquote {
 	background-color: #2f3238;
@@ -96,15 +96,15 @@ code, pre {
 }
 strong { font-weight: bold; }
 i { font-style: italic; }
-.clear { 
-	clear: both; 
+.clear {
+	clear: both;
 	width: 100%;
 }
 .display-block { display: block; }
 
 #main .content  table{
-	margin-bottom: 1.5em;  
-	width: 100%; 
+	margin-bottom: 1.5em;
+	width: 100%;
 }
 #main .content  th{
 	font-weight: bold;
@@ -126,7 +126,7 @@ i { font-style: italic; }
 	padding: 50px 100px;
 	position: relative;
 	z-index: 1;
-    background-color: #82172B;
+    background-color: #4a0400;
 }
 #container {
 	margin: 0 auto;
@@ -318,39 +318,39 @@ body.sidebar-second #sidebar-second {
 /* Little tricking with positions */
 .navigation  li {
 	float:left;
-	position:relative; 
+	position:relative;
 }
 .navigation  ul li a{
 	display: block;
 	padding: 10px 20px 10px 10px;
-	color: #86888b;
+	color: darkgoldenrod;
 	text-transform: uppercase;
 }
 /* Sub Cat Menu stuff*/
 .navigation  ul ul{
-	position:absolute; 
-	left:0; 
+	position:absolute;
+	left:0;
 	display:none; /* Hide it by default */
-	margin:0 0 0 -1px; 
+	margin:0 0 0 -1px;
 	padding:0;
 	list-style: none;
 	border-bottom: 1px solid #d33b3c;
 	z-index: 110;
 }
-	
+
 .navigation  ul ul li {
-	width: 170px; 
-	float: left; 
+	width: 170px;
+	float: left;
 	border-top: none;
 }
-	
+
 /* Sub Cat menu link properties */
 .navigation ul ul a { }
 
 .navigation  ul ul li a {
-	background: #111314; 
+	background: #111314;
 	display: block;  	/* Making sure a element covers whole li area */
-	padding: 4px 10px; 
+	padding: 4px 10px;
 	text-decoration: none; /* No underline */
 	border-top: 1px solid #d33b3c;
 	text-transform: none;
@@ -361,7 +361,7 @@ li.expanded > a:after {
 	color: #52575f;
 	font-weight: bold;
 }
-	
+
 #breadcrumb {
 	background-color: #2f3238;
 	padding: 0.5em 1em;
@@ -619,14 +619,16 @@ ul.pager .pager-current {
 	margin-right: 0;
 }
 #footer-bottom {
-	background: #26292e url(images/content-bg.jpg);
+	/*background: #26292e url(images/content-bg.jpg);*/
 	padding: 14px 0;
 	width: 100%;
 	display: table;
+    background-color: #4a0400;
 }
 #copyright {
 	font-size: 16px;
 	width: 100%;
+    color: darkgoldenrod;
 }
 
 /* Homepage Slider
