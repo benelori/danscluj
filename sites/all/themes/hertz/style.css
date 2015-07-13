@@ -785,3 +785,7 @@ ul.pager .pager-current {
 #edit-submit:hover, #edit-preview:hover, #edit-delete:hover, input.form-submit:hover{
 	color: #d33b3c;
 }
+
+.facebookshare-box {
+  float: left;
+}

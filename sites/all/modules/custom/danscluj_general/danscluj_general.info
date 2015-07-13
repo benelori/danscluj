@@ -1,0 +1,4 @@
+name = Danscluj General
+description = Module Containing General Implementations
+core = 7.x
+package = Danscluj

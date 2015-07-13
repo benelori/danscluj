@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations.
+ */
+
+function danscluj_general_menu() {
+  $items['register-to-class'] = array(
+    'title' => t('Register to Class'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('danscluj_general_register_to_class_form'),
+    'access arguments' => array('access content'),
+    'file' => 'inc/danscluj_general.form.inc',
+  );
+
+  $items['admin/config/danscluj'] = array(
+    'title' => 'Dans Cluj',
+    'description' => 'Custom settings for Dans Cluj',
+    'position' => 'right',
+    'weight' => 100,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  return $items;
+}
+
+
+
+/**
+ * Implements hook_block_info().
+ */
+function danscluj_general_block_info() {
+  // This example comes from node.module.
+  $blocks['block_register'] = array(
+    'info' => t('Register to Class'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function danscluj_general_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'block_register':
+      $node = menu_get_object();
+
+      module_load_include('inc', 'danscluj_general', 'inc/danscluj_general.form');
+      $category = taxonomy_term_load($node->field_categorie_curs[LANGUAGE_NONE][0]['tid']);
+      $form = drupal_get_form('danscluj_general_register_to_class_form');
+
+      $form['category']['#access'] = FALSE;
+
+      $block['subject'] = t('Register to %class classes', array('%class' => $category->name));
+      $block['content'] = $form;
+
+      break;
+
+  }
+
+  return $block;
+}
