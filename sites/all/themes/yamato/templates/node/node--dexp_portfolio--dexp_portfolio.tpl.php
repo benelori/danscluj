@@ -9,11 +9,5 @@
       <div class="portfolio-title">
         <h5><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h5>
       </div>
-      <div class="portfolio-client">
-        <span><?php print t('Client:'); ?></span> <?php print strip_tags(render($content['field_portfolio_client'])); ?>
-      </div>
-	  <div class="portfolio-description">
-		<?php print render($content['field_portfolio_categories']); ?>
-	  </div>
     </div>
-</div> 
+</div>

@@ -22,5 +22,6 @@
 	</div>
 	<div class="blog-content">
 		<?php print render($content['body']);?>
-	</div>
+    <?php print render($content['field_images']); ?>
+  </div>
 </div>

@@ -9,18 +9,10 @@
       <?php print render($content['field_portfolio_images']); ?>
     </div>
     <div class="portfolio-details col-md-5">
-      <h3 class="headline"><?php print t('Job Description');?></h3>
+      <h3 class="headline"><?php print $node->title;?></h3>
       <span class="brd-headling"></span>
       <div class="clearfix"></div>
       <p><?php print render($content['body']); ?></p>
-      <h3 class="headline"><?php print t('Project Details');?></h3>
-      <span class="brd-headling"></span>
-      <div class="clearfix"></div>
-      <?php print render($content['field_portfolio_categories']);?>
-      <div class="clearfix"></div>
-      <?php print render($content['field_portfolio_client']);?>
-      <div class="clearfix"></div>
-      <?php print render($content['field_portfolio_url']);?>
     </div>
   </div>
 </div> 
